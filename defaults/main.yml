@@ -1,0 +1,20 @@
+---
+ct_docker_exporter_task_prefix: "=== DOCKER EXPORTER CT ==="
+# Network settings
+ct_docker_exporter_bind_addr: "127.0.0.1"
+ct_docker_exporter_bind_port: "9417"
+ct_docker_exporter_bind_ct_port: "9417"
+# Container settings
+ct_docker_exporter_ct_name: "docker-exporter"
+ct_docker_exporter_ct_image: "prometheusnet/docker_exporter"
+ct_docker_exporter_ct_version: "latest"
+ct_docker_exporter_ct_state: "started"
+ct_docker_exporter_ct_restart_policy: "always"
+ct_docker_exporter_ct_restart: "no"
+ct_docker_exporter_ct_pull: "no"
+ct_docker_exporter_ct_recreate: "no"
+ct_docker_exporter_ct_ports:
+  - "{{ ct_docker_exporter_bind_addr }}:{{ ct_docker_exporter_bind_port }}:{{ ct_docker_exporter_bind_ct_port }}"
+ct_docker_exporter_ct_volumes:
+  - "/var/run/docker.sock:/var/run/docker.sock"
+...

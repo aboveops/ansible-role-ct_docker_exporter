@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  author: Valentin Gostev
+  description: Ansible role deploys docker exporter container
+  company: AboveOps
+  role_name: ct_docker_exporter
+  namespace: aboveops
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+  galaxy_tags:
+    - docker
+    - exporter
+    - prometheus
+    - metrics
+    - monitoring
+dependencies: []
+...

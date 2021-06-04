@@ -1,0 +1,13 @@
+---
+- name: "{{ ct_docker_exporter_task_prefix }} Create container"
+  docker_container:
+    name: "{{ ct_docker_exporter_ct_name }}"
+    image: "{{ ct_docker_exporter_ct_image }}:{{ ct_docker_exporter_ct_version }}"
+    state: "{{ ct_docker_exporter_ct_state }}"
+    restart_policy: "{{ ct_docker_exporter_ct_restart_policy }}"
+    restart: "{{ ct_docker_exporter_ct_restart }}"
+    pull: "{{ ct_docker_exporter_ct_pull }}"
+    ports: "{{ ct_docker_exporter_ct_ports }}"
+    volumes: "{{ ct_docker_exporter_ct_volumes }}"
+    recreate: "{{ ct_docker_exporter_ct_recreate }}"
+...
